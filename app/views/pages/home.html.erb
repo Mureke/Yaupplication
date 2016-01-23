@@ -1,2 +1,15 @@
-<h1>Home page!
-</h1>
+
+<% provide(:title, 'Welcome!') %>
+
+<h1>Home page!</h1>
+
+
+<%= render 'pages/bootstrap-carousel' %>
+
+<script>
+  $(document).ready(function () {
+    $('.carousel').carousel({
+      interval: 8000
+    });
+  });
+</script>
