@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Path</th>
       <th>Desc</th>
       <th colspan="3"></th>
     </tr>
@@ -16,8 +15,8 @@
     <% @projects.each do |project| %>
       <tr>
         <td><%= project.name %></td>
-        <td><%= project.path %></td>
         <td><%= project.desc %></td>
+        <td><img class="project-image" src="<%=project.image%>"</td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
         <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
