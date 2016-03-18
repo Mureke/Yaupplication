@@ -3,4 +3,5 @@ class Project < ActiveRecord::Base
 	
 	validates_attachment :image,
                      content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
+                     
 end

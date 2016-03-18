@@ -2,20 +2,25 @@
 ================================================== -->
 <%= javascript_include_tag "bootstrap-carousel" %>
 <%= javascript_include_tag "bootstrap-transition" %>
+
+<div class="col-md-6 col-xs-12 carousel-wrapper">
 <div id="myCarousel" class="carousel slide">
   <div class="carousel-inner">
-    <div class="item active">
-      <%= image_tag("IMG_9362.JPG") %>
-    </div>
-    <div class="item">
-      <%= image_tag("Skissi.jpg") %>
-    </div>
-    <div class="item ">
-      <%= image_tag("tyypp.JPG") %>
-    </div>
-  </div>
+<% first = true %>
+    <% @projects.each do |project| %>
+      <% if first %>
+        <div class="item active">
+          <img src="<%=project.image%>">
+        </div>
+      <%first = false%>
+      <%else%>
+        <div class="item">
+          <img src="<%=project.image%>">
+        </div>
+      <%end%>
+    <%end%>
 
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
   <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div><!-- /.carousel -->
-
+</div><!--/.column -->
