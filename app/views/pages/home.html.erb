@@ -1,15 +1,24 @@
 
-<% provide(:title, 'Welcome!') %>
-<div class="container">
+<% provide(:title, 'Tony Yau') %>
+<div class="container front_wrapper">
 	<div class="col-md-6 col-xs-12 site-title-wrapper">
 		<h1 id="site_title">Tony Yau</h1>
+
+		<!-- Links to info and gallery -->
+		<div class="link-wrapper">
+			<ul>
+				<li><a href="#">Info </a>|</li>
+				<li><a href="#">Gallery</a></li>
+			</ul>
+		</div>
+
 	</div>
 	<%= render 'pages/bootstrapcarousel' %>
 </div>
 <script>
   $(document).ready(function () {
     $('.carousel').carousel({
-      interval: 8000
+      interval: 3000
     });
   });
 </script>
