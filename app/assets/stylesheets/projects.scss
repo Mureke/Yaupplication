@@ -2,9 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//CHANGE THIS LATER!
+.gallery-wrapper{
+	text-align:center;
+}
+
+#gallery-title{
+	font-family:sans-serif;
+	font-size:8em;
+	margin-bottom:35px;
+	text-shadow: 4px 3px 5px rgba(150, 150, 150, 1);
+}
 .project-image{
-	width:100px;
-	height:100px;
+	width:50%;
+	height:50%;
 	margin:7px;
 }
