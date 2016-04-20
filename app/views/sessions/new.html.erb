@@ -1,0 +1,26 @@
+<%= form_tag sessions_path do %>
+    <h1>All hail Great Master Tony!</h1>
+    <div>Please enter your account data to do sum admin biz...</div>
+
+    <p>
+      <%= label_tag :name %><br />
+      <%= text_field_tag :name, params[:name] %>
+    </p>
+    <p>
+      <%= label_tag :password %><br />
+      <%= password_field_tag :password %>
+    </p>
+    <p class="button"><%= submit_tag %></p>
+<% end %>
+
+<script>
+
+  $(document).ready(function() {
+    setInterval(function () {
+      var colours = ['red', 'blue', 'green', 'pink'];
+      randomColor = colours[Math.floor(Math.random() * colours.length)];
+      $('h1').animate({'fontSize': "3em"}, 'slow').css({'color': randomColor})
+          .animate({'fontSize': "1em"}, 'slow')
+    }, 'fast')
+  });
+  </script>
