@@ -9,6 +9,11 @@
 	font-family:sans-serif;
 }
 
+#site-title-link{
+	text-decoration:none;
+	color:#000;
+}
+
 .link-wrapper{
 	margin-top:10px;
 	margin-right:25px;
@@ -105,19 +110,19 @@
 	}
 
 	.link-wrapper{
-		margin-top:15px;
+		margin-top:25px;
 		margin-right:25px;
 	}
 
 	.carousel-wrapper{
-	margin-top:5%;
+	margin-top:2%;
 	max-height:300px;
 	overflow:hidden;
 
 		.shader{
 			display:none;
 		}
-		
+
 		.item, .active{
 			height: 300px;
 
@@ -128,6 +133,23 @@
 		}
 	}
 
+}
+
+/* SPECIAL MEDIA QUERY FOR RETARDED IMAGE IN TABLET SCREEN SIZES :---------------DDDD */
+
+@media screen and (max-width:980px) and (min-width: 420px){
+	.carousel-wrapper{
+		max-height: 100%;
+
+		.item, .active{
+			height: 100%;
+
+			img{
+				height:100%;
+				width: 100%;
+			}
+		}
+	}
 }
 
 
