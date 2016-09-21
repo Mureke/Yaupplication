@@ -1,16 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <div class="gallery-wrapper">
-  <h1 id="gallery-title">Gallery</h1>
+ 
 
+<div class="col-md-12">
+  <h1 id="gallery-title">Gallery</h1>
+  <div class="link-wrapper">
+      <ul>
+      <li><%= link_to 'Home', root_path %>&nbsp|&nbsp</li>
+      <li><a href="/info">Info </a></li>
+    </ul>
+  </div>
+</div>
+<div class="image-list-wrapper">
   <% @projects.each do |project| %>
     <div class="col-md-6 col-xs-12">
-      <tr>
-        <td><img class="project-image" src="<%=project.image%>"></td>
-        <td class="project-name"><%= project.name %></td>
-        <td class="project-descrpition"><%= project.desc %></td>
-      </tr>
+      <div class="image-wrapper">
+        <img class="project-image" src="<%=project.image%>">
+      <a href="/projects">
+    <div class="shader2">
+      <div class="project-button">
+        <p class="project-name"><%= project.name %></p>
+      </div>
+    </div>
+    </a>
+    </div>
+        <p class="project-description"><%= project.desc %></p>
+         <span class="edit"><%= link_to 'Edit', edit_project_path(project) %></span> -
+         <span class="delete"><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></span>
     </div>
   <% end %>
+</div>
 </div>
 
