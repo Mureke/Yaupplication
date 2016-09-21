@@ -26,9 +26,11 @@
        </a>
       </div>
         <p class="project-description"><%= project.desc %></p>
+      <% if current_user %>
          <span class="edit"><%= link_to 'Edit', edit_project_path(project) %></span> -
          <span class="delete"><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-    </div>
+    <% end %>
+          </div>
   <% end %>
 </div>
 </div>
