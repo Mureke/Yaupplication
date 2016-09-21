@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   post "log_in" => "sessions#create"
   post "logout" => "sessions#destroy", :as => "logout"
 
+  match "/404" => "errors#error404", via: [ :get, :post, :patch, :delete ]
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
