@@ -15,7 +15,7 @@
 <div class="image-list-wrapper">
   <% iterator = 0 %>
   <div class="col-md-6 col-xs-12 project-container">
-    <% @projects.each do |project| %>
+    <% @projects.reverse_each do |project| %>
     <% if iterator%2==0 %> 
     
         <div class="image-wrapper">
@@ -43,7 +43,7 @@
 
   <% iterator = 1 %>
   <div class="col-md-6 col-xs-12 project-container">
-    <% @projects.each do |project| %>
+    <% @projects.reverse_each do |project| %>
     <% if iterator%2==0 %> 
     
         <div class="image-wrapper <%= cycle("odd-project", "even-project") -%>">
