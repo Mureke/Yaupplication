@@ -8,7 +8,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<% if current_user %>
+    <header class="navbar navbar-fixed-top">
+      <nav>
+        <ul class="nav navbar-nav navbar-right" style="margin-right: 5%; margin-top: 2%">
+    <li><%= button_to "Log out "+User.find(session[:user_id]).name, {:controller=> "sessions", :action=> "destroy"}, {:class=>"btn btn-primary"} %><% end %></li>
+</ul>
+</nav>
+</header>
 <%= yield %>
 
 </body>
