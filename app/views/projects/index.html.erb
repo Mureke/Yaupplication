@@ -14,17 +14,17 @@
 </div>
 <div class="image-list-wrapper">
   <% @projects.each do |project| %>
-    <div class="col-md-6 col-xs-12">
-      <div class="image-wrapper">
+    <div class="col-md-6 col-xs-12 project-container">
+      <div class="image-wrapper <%= cycle("odd-project", "even-project") -%>">
         <img class="project-image" src="<%=project.image%>">
-      <a href="/projects">
-    <div class="shader2">
-      <div class="project-button">
-        <p class="project-name"><%= project.name %></p>
+        <a href="/projects">
+        <div class="shader2">
+          <div class="project-button">
+            <p class="project-name"><%= project.name %></p>
+          </div>
+        </div>
+       </a>
       </div>
-    </div>
-    </a>
-    </div>
         <p class="project-description"><%= project.desc %></p>
          <span class="edit"><%= link_to 'Edit', edit_project_path(project) %></span> -
          <span class="delete"><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></span>
