@@ -1,15 +1,15 @@
 <div id="session-wrapper">
-<%= form_tag sessions_path do %>
+<%= form_for(:session, url: log_in_path) do |f| %>
     <h1>All hail Great Master Tony!</h1>
     <div>Please enter your account data to do sum admin biz...</div>
 
     <p>
       <%= label_tag :name %><br />
-      <%= text_field_tag :name, params[:name] %>
+      <%= f.text_field :name, :placeholder => "Name" %>
     </p>
     <p>
       <%= label_tag :password %><br />
-      <%= password_field_tag :password, params[:password] %>
+      <%= f.password_field :password, :placeholder => "Password" %>
     </p>
     <p class="button"><%= submit_tag 'Yolo Swag' %></p>
 <% end %>

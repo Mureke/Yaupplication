@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "log_in" => "sessions#new", :as => "log_in"
+
   resources :sessions
   resources :users
   resources :projects
@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   get "info" => "pages#info"
   root 'pages#home'
+
+  get "log_in" => "sessions#new", :as => "log_in"
+  post "log_in" => "sessions#create"
+  delete "logout" => "sessions#destroy", :as => "logout"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

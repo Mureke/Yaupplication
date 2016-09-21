@@ -1,9 +1,15 @@
 
 <% provide(:title, 'Tony Yau') %>
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<% if current_user %>
+    <%= button_to "logout", :controller=> "sessions", :action=> "destroy" %>Log out <%= User.find(session[:user_id]).name %><%end%>
+
 <div class="container front_wrapper">
 	<div class="col-md-6 col-xs-12 site-title-wrapper">
 		<a id="site-title-link" href="/"><h1 id="site_title">Tony Yau</h1></a>
-
 		<!-- Links to info and gallery -->
 		<div class="link-wrapper">
 			<ul>
