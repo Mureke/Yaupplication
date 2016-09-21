@@ -18,7 +18,7 @@
     <% @projects.each do |project| %>
     <% if iterator%2==0 %> 
     
-        <div class="image-wrapper <%= cycle("odd-project", "even-project") -%>">
+        <div class="image-wrapper">
           <img class="project-image" src="<%=project.image%>">
           <a href="/projects">
           <div class="shader2">
