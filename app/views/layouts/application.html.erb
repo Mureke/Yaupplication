@@ -14,11 +14,12 @@
         <ul class="nav navbar-nav navbar-right" style="margin-right: 5%; margin-top: 2%;">
           <li><%= button_to "Add a new project", {:controller=> "projects", :action=> "new"},{:class=>"btn btn-default", :method=>"get"} %></li>
           <li><%= button_to "Log out "+User.find(session[:user_id]).name, {:controller=> "sessions", :action=> "destroy"}, {:class=>"btn btn-primary"} %></li>
-</ul>
-</nav>
-</header>
+        </ul>
+      </nav>
+    </header>
 <% end%>
-<%= yield %>
+
+  <%= yield %>
 
 </body>
 </html>
