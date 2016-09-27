@@ -4,9 +4,6 @@ $(document).ready(function(){
 		event.preventDefault();
 		event.stopPropagation();
 		var self = $(this);
-		$('.visible-project').each(function(){
-				$(this).next().slideUp(400);
-		});
 
 		if(self.hasClass('visible-project')){
 			self.next().slideUp(600);
