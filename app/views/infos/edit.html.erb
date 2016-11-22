@@ -1,0 +1,25 @@
+
+<% provide(:title, 'Tony Yau') %>
+<div class="container front_wrapper">
+  <div class="col-md-6 col-xs-12 site-title-wrapper">
+    <a id="site-title-link" href="/"><h1 id="site_title">Tony Yau</h1></a>
+
+    <!-- Links to info and gallery -->
+    <div class="link-wrapper">
+      <ul>
+        <li><a href="/">Home </a>&nbsp|&nbsp</li>
+        <li><a href="/projects">Gallery</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <%= form_for(@info) do |f| %>
+  <div class="col-md-6 col-xs-12 editWrapper">
+    <p><%= f.text_area :text %></p><br><br>
+    <a>  <%= f.text_field :email %></a>
+  </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+  <% end %>
+</div>

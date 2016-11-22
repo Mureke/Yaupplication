@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :infos
   resources :sessions
   resources :users
   resources :projects
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  get "info" => "pages#info"
+  get "info" => "infos#index"
   root 'pages#home'
 
   get "log_in" => "sessions#new", :as => "log_in"

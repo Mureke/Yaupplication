@@ -1,0 +1,23 @@
+
+<% provide(:title, 'Tony Yau') %>
+<div class="container front_wrapper">
+  <div class="col-md-6 col-xs-12 site-title-wrapper">
+    <a id="site-title-link" href="/"><h1 id="site_title">Tony Yau</h1></a>
+
+    <!-- Links to info and gallery -->
+    <div class="link-wrapper">
+      <ul>
+        <li><a href="/">Home </a>&nbsp|&nbsp</li>
+        <li><a href="/projects">Gallery</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="col-md-6 col-xs-12 info-wrapper">
+    <p><%= @info.text %></p><br><br>
+    <a href=mailto:<%= @info.email %> target="_top"><%= @info.email %></a>
+  </div>
+  <% if current_user %>
+      <span class="edit"><%= link_to 'Edit', edit_info_path(@info) %></span>
+  <% end %>
+</div>
