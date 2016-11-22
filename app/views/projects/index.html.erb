@@ -18,7 +18,7 @@
     <% @projects.reverse_each do |project| %>
     <% if iterator%2==0 %> 
     
-        <div class="image-wrapper">
+        <div class="image-wrapper even-project">
           <img class="project-image" src="<%=project.image%>">
           <a href="/projects">
           <div class="shader2">
@@ -28,7 +28,7 @@
           </div>
          </a>
         </div>
-        <div class="project-desc-wrapper">
+        <div class="project-desc-wrapper desc-left">
         <h3 class="desc-name"><%= project.name %> </h3>
         <p class="project-description"><%= project.desc %></p>
         </div>
@@ -46,7 +46,7 @@
     <% @projects.reverse_each do |project| %>
     <% if iterator%2==0 %> 
     
-        <div class="image-wrapper <%= cycle("odd-project", "even-project") -%>">
+        <div class="image-wrapper odd-project">
           <img class="project-image" src="<%=project.image%>">
           <a href="/projects">
           <div class="shader2">
