@@ -18,3 +18,13 @@ p3.save
 tony = User.new(:name=>"Tony", :password=>"Salasana")
 tony.save
 
+info = Info.new(:text =>
+                    "Tony Yau is an industrial designer,
+				currently studying design in the Aalto
+				University in Helsinki, Finland. His main
+				strengths are his knowledge of various
+				materials and areas of design. He has
+				designed eg. watches, bags, and
+				furniture", :email => "tony.yau@gmail.com")
+
+info.save

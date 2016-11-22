@@ -12,28 +12,12 @@ class InfosController < ApplicationController
   def edit
   end
 
-  # POST /infos
-  # POST /infos.json
-  def create
-    @info = Info.new(info_params)
-
-    respond_to do |format|
-      if @info.save
-        format.html { redirect_to @info, notice: 'Info was successfully created.' }
-        format.json { render :show, status: :created, location: @info }
-      else
-        format.html { render :new }
-        format.json { render json: @info.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
   # PATCH/PUT /infos/1
   # PATCH/PUT /infos/1.json
   def update
     respond_to do |format|
       if @info.update(info_params)
-        format.html { redirect_to @info, notice: 'Info was successfully updated.' }
+        format.html { redirect_to infos_path, notice: 'Info was successfully updated.' }
         format.json { render "pages/info", status: :ok, location: @info }
       else
         format.html { render :edit }
