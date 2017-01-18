@@ -1,13 +1,17 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+  font-family: folio-medium;
+  src: "./folio-medium.tff";
+}
 
 .gallery-wrapper{
 	text-align:center;
 }
 
 #gallery-title{
-	font-family:sans-serif;
+	font-family:folio-medium;
 	font-size:5em;
 	margin-bottom:35px;
 
@@ -68,7 +72,7 @@
 
 	
 .project-name {
-    font-family: sans-serif;
+    font-family: folio-medium;
     font-size: 3em;
     color: #fff;
     margin-top: 25%;

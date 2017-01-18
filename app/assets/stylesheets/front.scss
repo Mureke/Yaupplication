@@ -1,3 +1,8 @@
+@font-face {
+  font-family: folio-medium;
+  src: "./folio-medium.tff";
+}
+
 .front_wrapper{
 	margin: 7%;
 	text-align:center;
@@ -6,7 +11,7 @@
 #site_title{
 	font-size:170px;
 	letter-spacing:6px;
-	font-family:sans-serif;
+	font-family:folio-medium;
 }
 
 #site-title-link{
@@ -19,7 +24,7 @@
 	margin-right:25px;
 
 	ul{
-		font-family:sans-serif;
+		font-family:folio-medium;
 
 		li{
 			display: inline-block;
@@ -50,7 +55,7 @@
 	}
 
 	.shader{
-		background-color: #000;
+		background-color: #eee;
 		opacity: 0;
 		width:100%;
 		height:100%;
@@ -64,10 +69,10 @@
 	}
 
 	.enter{
-		font-family: sans-serif;
+		font-family: folio-medium;
 		letter-spacing:5px;
 		font-size: 4em;
-		color:#fff;
+		color:#000;
 		line-height: 380px;
 	}
 
@@ -88,11 +93,14 @@
 .info-wrapper{
 	margin-top:8%;
 	max-height:400px;
+  font-family: folio-medium;
 
 	p{
 		font-size: 23px;
 	    line-height: 33px;
 	    color: #6d6a6a;
+      font-family: folio-medium;
+
 	} 
 
 	a{
