@@ -6,15 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
-p1 = Project.new(:name => "Projekti 1", :image => File.new("app/assets/images/IMG_9362.JPG", "r"), :desc => "First Project")
-p2 = Project.new(:name => "Projekti 2", :image => File.new("app/assets/images/Skissi.jpg", "r"), :desc => "Second Project")
-p3 = Project.new(:name => "Projekti 3", :image =>  File.new("app/assets/images/tyypp.JPG", "r"), :desc => "Third Project")
-
-p1.save
-p2.save
-p3.save
-
 tony = User.new(:name=>"Tony", :password=>"Salasana")
 tony.save
 

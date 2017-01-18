@@ -13,6 +13,15 @@ class ProjectsController < ApplicationController
   def show
   end
 
+  def showimage
+    send_data(@project.file_contents,
+              type: @project.content_type,
+              filename: @project.filename)
+  end
+
+
+
+
   # GET /projects/new
   def new
     @project = Project.new
@@ -70,6 +79,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :path, :image, :desc)
+      params.require(:project).permit(:name, :file, :desc)
     end
 end
