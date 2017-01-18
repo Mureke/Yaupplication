@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @introtext.text %>
+</p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @introtext.startdate %>
+</p>
+
+<p>
+  <strong>Enddate:</strong>
+  <%= @introtext.enddate %>
+</p>
+
+<%= link_to 'Edit', edit_introtext_path(@introtext) %> |
+<%= link_to 'Back', introtexts_path %>

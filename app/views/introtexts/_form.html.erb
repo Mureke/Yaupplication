@@ -1,0 +1,29 @@
+<%= form_for(@introtext) do |f| %>
+  <% if @introtext.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@introtext.errors.count, "error") %> prohibited this introtext from being saved:</h2>
+
+      <ul>
+      <% @introtext.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :text %><br>
+    <%= f.text_field :text %>
+  </div>
+  <div class="field">
+    <%= f.label :startdate %><br>
+    <%= f.date_select :startdate %>
+  </div>
+  <div class="field">
+    <%= f.label :enddate %><br>
+    <%= f.date_select :enddate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
