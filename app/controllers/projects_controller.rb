@@ -13,10 +13,12 @@ class ProjectsController < ApplicationController
   def show
   end
 
+  # GET /projects/showimage/1
   def showimage
-    send_data(@project.file_contents,
-              type: @project.content_type,
-              filename: @project.filename)
+    project = Project.find(params[:id])
+    send_data(project.file_contents,
+              type: project.content_type,
+              filename: project.filename)
   end
 
 
