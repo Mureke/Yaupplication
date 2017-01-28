@@ -8,12 +8,12 @@
     <% @projects.each do |project| %>
       <% if first %>
         <div class="item active">
-         
+          <img class="project-image" src="<%= url_for :controller => 'projects', :action => 'showimage', :id => project.id %>">
         </div>
       <%first = false%>
       <%else%>
         <div class="item">
-        
+          <img class="project-image" src="<%= url_for :controller => 'projects', :action => 'showimage', :id => project.id %>">
         </div>
       <%end%>
     <%end%>

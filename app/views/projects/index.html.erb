@@ -13,13 +13,12 @@
   </div>
 </div>
 <div class="image-list-wrapper">
-  <% iterator = 0 %>
+
   <div class="col-md-6 col-xs-12 project-container">
     <% @projects.reverse_each do |project| %>
-    <% if iterator%2==0 %> 
     
-        <div class="image-wrapper even-project">
-          <img class="project-image" src="<%=project.image%>">
+        <div class="image-wrapper">
+          <img class="project-image" src="<%= url_for :controller => 'projects', :action => 'showimage', :id => project.id  %>">
           <a href="/projects">
           <div class="shader2">
             <div class="project-button">
@@ -36,38 +35,10 @@
            <span class="edit"><%= link_to 'Edit', edit_project_path(project) %></span> -
            <span class="delete"><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></span>
       <% end %>
-          <% end %>
-      <% iterator = iterator + 1 %>
+ 
     <% end %>
   </div>
 
-  <% iterator = 1 %>
-  <div class="col-md-6 col-xs-12 project-container">
-    <% @projects.reverse_each do |project| %>
-    <% if iterator%2==0 %> 
-    
-        <div class="image-wrapper odd-project">
-          <img class="project-image" src="<%=project.image%>">
-          <a href="/projects">
-          <div class="shader2">
-            <div class="project-button">
-              <p class="project-name"><%= project.name %></p>
-            </div>
-          </div>
-         </a>
-        </div>
-        <div class="project-desc-wrapper">
-        <h3 class="desc-name"><%= project.name %> </h3>
-        <p class="project-description"><%= project.desc %></p>
-        </div>
-        <% if current_user %>
-           <span class="edit"><%= link_to 'Edit', edit_project_path(project) %></span> -
-           <span class="delete"><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-      <% end %>
-          <% end %>
-      <% iterator = iterator + 1 %>
-    <% end %>
-              </div>
   </div>
 </div>
 
