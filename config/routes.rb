@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   post "log_in" => "sessions#create"
   post "logout" => "sessions#destroy", :as => "logout"
 
+  get "projects/showimage/:id" => 'projects#showimage'
+
   match "/404" => "errors#error404", via: [ :get, :post, :patch, :delete ]
 
 
