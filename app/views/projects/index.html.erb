@@ -12,8 +12,8 @@
       </ul>
     </div>
   </div>
-
-  <div class="image-list-wrapper">
+  <br><br>
+  <div class="image-list-wrapper container">
     <% @projects.reverse_each do |project| %>
       <div class="col-md-6 col-xs-12">
         <a href="<%= url_for :controller => 'projects', :action => 'show', :id => project.id  %>">

@@ -5,7 +5,7 @@
 <div id="myCarousel" class="carousel slide">
   <div class="carousel-inner">
 <% first = true %>
-    <% @projects.each do |project| %>
+    <% @projects.reverse_each do |project| %>
       <% if first %>
         <div class="item active">
           <img class="project-image" src="<%= url_for :controller => 'projects', :action => 'showimage', :id => project.id %>">

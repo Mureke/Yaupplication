@@ -19,6 +19,7 @@
 
 .image-list-wrapper{
 	margin-left:5%;
+	margin-top:2%;
 }
 .project-image{
 	width:90%;
@@ -31,25 +32,9 @@
 }
 
 
-.even-project{
-	margin-left: 8% !important;
-}
 
-.project-desc-wrapper{
-	display:none;
-	margin-bottom:7%;
-}
-
-.desc-left{
-		margin-left: 9%;
-}
-
-.project-description{
-	width:90%;
-}
 
 .image-wrapper{
-	width: 90%;
 	margin:7px;
 	position: relative;
 		margin-bottom: 4%;
@@ -86,8 +71,12 @@
 		text-align: center;
 
 		#project_image{
+			position:relative;
 		    margin-left: auto;
 			margin-right: auto;
+			input{
+				margin:auto;
+			}
 		}
 
 		#project_desc{
@@ -96,4 +85,28 @@
     		resize: none;
 		}
 	}
+.show-wrapper{
+	text-align:center;
+}
+.show-image-wrapper{
+	width: 100%;
+	max-width: 700px;
+	margin: auto;
+	margin-top:25px;
+	img{
+		margin-bottom: 2%;
+	}
+}
 
+.show-description{
+	width: 100%;
+	max-width: 960px;
+	position:relative;
+	margin-left: auto;
+    margin-right: auto;
+	.project-description{
+		font-size:2.1em;
+		font-family: folio-medium;
+		line-height: 1.5;
+	}
+}
