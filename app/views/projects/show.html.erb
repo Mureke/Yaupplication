@@ -1,16 +1,18 @@
 <p id="notice"><%= notice %></p>
+<div class="gallery-wrapper">
+<h1 id="gallery-title">
 
-<p>
-  <strong>Name:</strong>
   <%= @project.name %>
-</p>
-
-	<img src="/projects/showimage/<%= @project.id %>" class="project-image">
+</h1>
+	<div show-image-wrapper>
+	   <img class="project-image" src="<%= url_for :controller => 'projects', :action => 'showimage', :id => @project.id %>">
+	</div>
 
 <p>
-  <strong>Desc:</strong>
   <p class="project-description"><%= @project.desc %></p>
 </p>
-
+<% if current_user %>
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
+<% end %>
+</div>
