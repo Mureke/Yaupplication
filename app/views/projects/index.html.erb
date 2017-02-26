@@ -15,6 +15,7 @@
   <br><br>
   <div class="image-list-wrapper container">
     <% @projects.reverse_each do |project| %>
+    <div class="<%= cycle("", "row") -%>">
       <div class="col-md-6 col-xs-12">
         <a href="<%= url_for :controller => 'projects', :action => 'show', :id => project.id  %>">
           <div class="image-wrapper">
@@ -30,6 +31,7 @@
            <span class="edit"><%= link_to 'Edit', edit_project_path(project) %></span> -
            <span class="delete"><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></span>
         <% end %>
+      </div>
       </div>
     <% end %>
   </div>
