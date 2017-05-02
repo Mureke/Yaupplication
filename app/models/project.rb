@@ -14,8 +14,6 @@ class Project < ActiveRecord::Base
 
   private
   def sanitize_filename(filename)
-    # Get only the filename, not the whole path (for IE)
-    # Thanks to this article I just found for the tip: http://mattberther.com/2007/10/19/uploading-files-to-a-database-using-rails
     return File.basename(filename)
   end
 

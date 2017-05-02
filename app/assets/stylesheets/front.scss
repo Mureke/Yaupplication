@@ -47,11 +47,18 @@
 }
 
 .carousel-wrapper{
-	margin-top:5%;
-	max-height:400px;
+	width:25%;
+    margin-top: 6%;
+    :after{
+      content: "";
+      display: block;
+      padding-bottom: 80%;
+    }
 
 	.carousel-inner{
-		position:relative;
+      position: absolute;
+      width: 100%;
+      height: 100%;
 	}
 
 	.shader{
@@ -60,6 +67,7 @@
 		width:100%;
 		height:100%;
 		z-index: 10;
+        padding: 0;
 		transition:opacity 0.5s;
 		position: absolute; top: 0; left: 0;
 	}
@@ -73,18 +81,19 @@
 		letter-spacing:5px;
 		font-size: 4em;
 		color:#000;
-		line-height: 380px;
+		line-height: 400px;
 	}
 
 
 	.item{
-		height: 400px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
 
-		img{
-			height:100% !important;
-			width: 100%;
-			position:relative;
-		}
+      .project-image{
+        width:100%;
+        height:100%;
+      }
 	}
 
 	.carousel-control{display:none;}
@@ -110,7 +119,7 @@
 	}
 }
 
-@media (max-width:1200px){
+/*@media (max-width:1200px){
 	.carousel-wrapper{
 	margin-top:9%;
 	max-height:400px;
@@ -126,7 +135,7 @@
 		}
 	}
 
-}
+}*/
 
 @media (max-width:980px){
 	
@@ -139,7 +148,7 @@
 		margin-right:25px;
 	}
 
-	.carousel-wrapper{
+	/*.carousel-wrapper{
 	margin-top:2%;
 	max-height:300px;
 	overflow:hidden;
@@ -156,13 +165,13 @@
 				width: 100%;
 			}
 		}
-	}
+	}*/
 
 }
 
 /* SPECIAL MEDIA QUERY FOR RETARDED IMAGE IN TABLET SCREEN SIZES :---------------DDDD */
 
-@media screen and (max-width:980px) and (min-width: 420px){
+/*@media screen and (max-width:980px) and (min-width: 420px){
 	.carousel-wrapper{
 		max-height: 100%;
 
@@ -175,6 +184,6 @@
 			}
 		}
 	}
-}
+}*/
 
 
